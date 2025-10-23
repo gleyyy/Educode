@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desafios - Educode</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo" onclick="window.location.href='index.html'">
+    <div class="logo-circle">
+      <img src="https://uploads.onecompiler.io/42qguq6z9/442awnxs6/Logoeducode.png" alt="Educode Logo" class="logo-image">
+    </div>
+    <span>Educode</span>
+  </div>
+  <nav>
+    <button onclick="window.location.href='index.html'">Início</button>
+    <butt<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafios - Educode</title>
+  <style>
+    /* ----- RESET E BASE ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ----- HEADER ----- */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .logo-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      background: white;
+    }
+
+    .logo-image {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .logo span {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #74cfcc;
+    }
+
+    nav button {
+      background-color: #6ad3e6;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      margin-left: 10px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    /* ----- HERO SECTION ----- */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #74cfcc, #6ad3e6);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero button {
+      background-color: white;
+      color: #74cfcc;
+      font-size: 1.1em;
+      padding: 12px 30px;
+    }
+
+    /* ----- FEATURES SECTION ----- */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card h3 {
+      color: #74cfcc;
+      margin-bottom: 15px;
+    }
+
+    /* ----- CONTAINER (para outras páginas) ----- */
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* ----- BOTÕES ----- */
+    button {
+      background-color: #6ad3e6;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      opacity: 0.9;
+      transform: translateY(-2px);
+    }
+
+    /* ----- FOOTER ----- */
+    footer {
+      text-align: center;
+      padding: 25px;
+      background-color: #333;
+      color: white;
+      margin-top: 40px;
+    }
+
+    /* ----- RESPONSIVIDADE ----- */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        padding: 10px;
+      }
+      
+      nav {
+        margin-top: 15px;
+        width: 100%;
+      }
+      
+      nav button {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+      }
+      
+      .hero {
+        padding: 50px 15px;
+      }
+      
+      .hero h1 {
+        font-size: 2em;
+      }
+      
+      .features {
+        grid-template-columns: 1fr;
+        padding: 40px 15px;
+        gap: 20px;
+      }
+      
+      .container {
+        padding: 15px;
+        margin: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8em;
+      }
+      
+      .hero p {
+        font-size: 1em;
+      }
+      
+      .feature-card {
+        padding: 20px 15px;
+      }
+      
+      .container {
+        margin: 10px;
+        padding: 10px;
+      }
+      
+      button {
+        font-size: 14px;
+        padding: 10px 15px;
+      }
+    }
+
+    /* ----- ESTILOS PARA DESAFIOS ----- */
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+      margin: 15px 0;
+      overflow: hidden;
+    }
+
+    .progress {
+      height: 100%;
+      background-color: #74cfcc;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    .alternativas {
+      margin: 20px 0;
+    }
+
+    .alternativa {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px 15px;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .alternativa:hover {
+      background-color: #e6f7f7;
+      border-color: #74cfcc;
+    }
+
+    .alternativa.selected {
+      background-color: #d1f0ef;
+      border-color: #74cfcc;
+    }
+
+    .alternativa.correct {
+      background-color: #d4edda;
+      border-color: #c3e6cb;
+    }
+
+    .alternativa.incorrect {
+      background-color: #f8d7da;
+      border-color: #f5c6cb;
+    }
+
+    .feedback {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      display: none;
+    }
+
+    .feedback.correct {
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+    }
+
+    .feedback.incorrect {
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      color: #721c24;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .stats span {
+      color: #74cfcc;
+    }
+
+    #codigoUsuario {
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-family: monospace;
+      resize: vertical;
+      margin: 15px 0;
+      font-size: 14px;
+    }
+
+    .level-badge {
+      display: inline-block;
+      background-color: #74cfcc;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      margin-left: 10px;
+    }
+
+    .level-complete {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .level-complete h3 {
+      color: #74cfcc;
+      margin-bottom: 20px;
+    }
+
+    .codigo-container {
+      background-color: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 15px 0;
+    }
+
+    .requisitos {
+      background-color: #fff3cd;
+      border: 1px solid #ffeaa7;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 15px 0;
+    }
+
+    .requisitos h4 {
+      color: #856404;
+      margin-bottom: 10px;
+    }
+
+    .requisitos ul {
+      padding-left: 20px;
+    }
+
+    .requisitos li {
+      margin-bottom: 5px;
+    }
+
+    .final-message {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, #74cfcc, #6ad3e6);
+      color: white;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .final-message h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .final-message p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    .emoji {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo" onclick="window.location.href='index.html'">
+      <div class="logo-circle">
+        <img src="https://uploads.onecompiler.io/42qguq6z9/442awnxs6/Logoeducode.png" alt="Educode Logo" class="logo-image">
+      </div>
+      <span>Educode</span>
+    </div>
+    <nav>
+      <button onclick="window.location.href='index.html'">Início</button>
+      <button onclick="window.location.href='ranking.html'">Ranking</button>
+      <button onclick="window.location.href='cadastro.html'">Cadastro</button>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Desafios Educativos - <span id="faseAtual">Iniciante</span></h2>
+    
+    <div class="stats">
+      <div>Pontuação: <span id="pontuacao">0</span></div>
+      <div>Nível: <span id="nivel">1</span></div>
+      <div>Pergunta: <span id="numeroDesafio">1</span>/<span id="totalDesafios">15</span></div>
+    </div>
+    
+    <div class="progress-bar">
+      <div class="progress" id="progresso"></div>
+    </div>
+    
+    <h3 id="tema"></h3>
+    <p id="explicacao"></p>
+    <p id="pergunta"></p>
+
+    <div class="alternativas" id="alternativas"></div>
+
+    <div id="areaCodigo" style="display: none;">
+      <div class="requisitos" id="requisitos"></div>
+      <textarea id="codigoUsuario" placeholder="Digite seu código HTML, CSS e JavaScript aqui..."></textarea>
+      <button id="botaoTestar">Testar Código</button>
+      <div id="preview" style="margin-top: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; min-height: 200px;"></div>
+    </div>
+
+    <button id="botaoEnviar">Enviar Resposta</button>
+
+    <div class="feedback" id="feedback"></div>
+  </div>
+
+  <script>
+    // Sistema de desafios - Todos os níveis
+    const todosDesafios = {
+      iniciante: [
+        // ... (seus 15 desafios iniciais aqui - mantive o mesmo)
+        {
+          tema: "Análise de Requisitos",
+          explicacao: "A análise de requisitos busca entender o que o cliente/usuário precisa do sistema antes de desenvolvê-lo.",
+          pergunta: "Qual o principal objetivo da análise de requisitos?",
+          alternativas: [
+            "A) Criar o design visual do sistema",
+            "B) Entender necessidades e definir o que será desenvolvido",
+            "C) Testar o software após pronto"
+          ],
+          respostaCorreta: 1,
+          porque: "A análise de requisitos tem como finalidade identificar e documentar as necessidades e expectativas dos stakeholders para guiar o desenvolvimento. Projetar a aparência (A) ou testar (C) são etapas diferentes que ocorrem depois ou em paralelo; elas não substituem entender o que o sistema deve fazer."
+        },
+           
+      {
+        tema: "Análise de Requisitos",
+        explicacao: "Requisitos podem ser funcionais (comportamento) ou não funcionais (qualidade/restrições).",
+        pergunta: "O que é um requisito não funcional?",
+        alternativas: [
+          "A) Funcionalidade principal do sistema",
+          "B) Desempenho, segurança ou usabilidade",
+          "C) Lista de usuários do sistema"
+        ],
+        respostaCorreta: 1,
+        porque: "Requisitos não funcionais definem como o sistema deve se comportar (por exemplo, desempenho, segurança, disponibilidade). A opção A descreve requisito funcional; C é um dado, não uma propriedade de qualidade."
+      },
+      {
+        tema: "Modelagem de Casos de Uso",
+        explicacao: "Casos de uso mostram interações entre usuários (atores) e o sistema para atingir objetivos.",
+        pergunta: "O que representa um 'ator' em um caso de uso?",
+        alternativas: [
+          "A) Um personagem fictício",
+          "B) Um usuário ou sistema que interage com o sistema",
+          "C) Um bug encontrado no software"
+        ],
+        respostaCorreta: 1,
+        porque: "Em modelagem, 'ator' é qualquer entidade (pessoa, outro sistema) que interage com o sistema para realizar uma tarefa. Não é um personagem de história (A) nem um defeito (C)."
+      },
+      {
+        tema: "Modelagem de Casos de Uso",
+        explicacao: "Diagramas de casos de uso ajudam a visualizar funcionalidades e seus usuários.",
+        pergunta: "O que um diagrama de casos de uso mostra?",
+        alternativas: [
+          "A) A estrutura do banco de dados",
+          "B) As interações entre usuários e funcionalidades",
+          "C) O layout das telas"
+        ],
+        respostaCorreta: 1,
+        porque: "Diagramas de caso de uso focam em quem usa o sistema e quais funcionalidades são usadas — não mostram modelagem de dados (A) nem detalhes de interface (C)."
+      },
+      {
+        tema: "Metodologias Ágeis (Scrum)",
+        explicacao: "Scrum organiza trabalho em ciclos curtos chamados sprints para entregar valor com frequência.",
+        pergunta: "O que é um sprint no Scrum?",
+        alternativas: [
+          "A) Um erro no código",
+          "B) Um ciclo de tempo para entregar funcionalidades",
+          "C) Um tipo de teste"
+        ],
+        respostaCorreta: 1,
+        porque: "Um sprint é um período fixo (por exemplo, 1–4 semanas) durante o qual a equipe desenvolve e entrega incrementos do produto. Não é um bug (A) nem um teste (C)."
+      },
+      {
+        tema: "Metodologias Ágeis (Scrum)",
+        explicacao: "O Product Owner representa a visão do produto e prioriza o trabalho.",
+        pergunta: "Qual o papel principal do Product Owner?",
+        alternativas: [
+          "A) Programar o sistema",
+          "B) Testar funcionalidades",
+          "C) Definir e priorizar requisitos"
+        ],
+        respostaCorreta: 2,
+        porque: "O Product Owner é responsável por gerenciar o backlog do produto, definir prioridades e esclarecer requisitos para garantir que a equipe entregue valor. Programação (A) e testes (B) são atribuídos à equipe de desenvolvimento."
+      },
+      {
+        tema: "Metodologias Ágeis (Scrum)",
+        explicacao: "A Daily Scrum é uma reunião curta para sincronizar a equipe.",
+        pergunta: "Quanto tempo deve durar a Daily Scrum?",
+        alternativas: [
+          "A) 15 minutos",
+          "B) 2 horas",
+          "C) 1 dia inteiro"
+        ],
+        respostaCorreta: 0,
+        porque: "A prática recomendada no Scrum é uma reunião diária de curta duração (máx. 15 minutos) para alinhamento rápido. Reuniões longas (B ou C) quebram o ritmo e são ineficazes para esse propósito."
+      },
+      {
+        tema: "Gestão de Projetos",
+        explicacao: "O triângulo do projeto (ou tripla restrição) mostra que tempo, custo e escopo estão interligados.",
+        pergunta: "Qual é o triângulo da gestão de projetos?",
+        alternativas: [
+          "A) Tempo, custo e escopo",
+          "B) Design, cor e fonte",
+          "C) Usuário, senha e login"
+        ],
+        respostaCorreta: 0,
+        porque: "Tempo, custo e escopo formam as restrições principais que determinam o sucesso do projeto; alterar uma afeta as outras. As opções B e C não representam as restrições de gerenciamento."
+      },
+      {
+        tema: "Gestão de Projetos",
+        explicacao: "Cronograma organiza quando tarefas serão executadas.",
+        pergunta: "O que representa um cronograma?",
+        alternativas: [
+          "A) Ordem de telas do sistema",
+          "B) Planejamento de tempos e datas das tarefas",
+          "C) Lista de erros do projeto"
+        ],
+        respostaCorreta: 1,
+        porque: "Um cronograma define datas, marcos e duração de tarefas. A opção A é relacionada a UX; C é um relatório de defeitos."
+      },
+      {
+        tema: "Requisitos Funcionais",
+        explicacao: "Requisitos funcionais descrevem comportamentos e funções que o sistema deve ter.",
+        pergunta: "Qual exemplo de requisito funcional?",
+        alternativas: [
+          "A) O sistema deve logar usuários",
+          "B) O sistema deve ser rápido",
+          "C) O sistema deve ser bonito"
+        ],
+        respostaCorreta: 0,
+        porque: "'Logar usuários' descreve uma função concreta que o sistema executa — isto é um requisito funcional. As opções B e C são requisitos não funcionais (qualidade/estética)."
+      },
+      {
+        tema: "Documentação",
+        explicacao: "Documentar decisões e artefatos facilita manutenção e entendimento futuro.",
+        pergunta: "Por que documentar um projeto é importante?",
+        alternativas: [
+          "A) Para decorar o sistema",
+          "B) Para registrar decisões e facilitar manutenção",
+          "C) Para substituir reuniões"
+        ],
+        respostaCorreta: 1,
+        porque: "A documentação preserva contexto, decisões e instruções úteis para manutenção e novos membros. Não é para 'decorar' (A) nem substituir totalmente comunicação (C)."
+      },
+      {
+        tema: "Metodologias Ágeis",
+        explicacao: "O Product Backlog contém tudo que pode ser necessário para o produto, priorizado.",
+        pergunta: "O que é o Product Backlog?",
+        alternativas: [
+          "A) Lista de erros",
+          "B) Lista de funcionalidades priorizadas",
+          "C) Lista de senhas"
+        ],
+        respostaCorreta: 1,
+        porque: "O Product Backlog é a lista priorizada de itens (histórias, funcionalidades, correções) que compõem o trabalho do produto. Não é apenas bugs (A) nem dados sensíveis (C)."
+      },
+      {
+        tema: "Planejamento",
+        explicacao: "Planejamento reduz riscos, evitando surpresas e retrabalho.",
+        pergunta: "O que acontece se não houver planejamento no projeto?",
+        alternativas: [
+          "A) O projeto pode atrasar ou falhar",
+          "B) O sistema fica mais bonito",
+          "C) O código se escreve sozinho"
+        ],
+        respostaCorreta: 0,
+        porque: "Sem planejamento há maior chance de atrasos, custos excedentes e entregas inadequadas. As opções B e C são falsas/irrealistas."
+      },
+      {
+        tema: "Stakeholders",
+        explicacao: "Stakeholders incluem todos que têm interesse ou são afetados pelo projeto.",
+        pergunta: "Quem é um stakeholder?",
+        alternativas: [
+          "A) Apenas o programador",
+          "B) Qualquer pessoa envolvida ou afetada pelo projeto",
+          "C) Apenas o testador"
+        ],
+        respostaCorreta: 1,
+        porque: "Stakeholders abrangem clientes, usuários, patrocinadores, equipe e qualquer parte interessada; não se limitam a um papel específico (A ou C)."
+      },
+      {
+        tema: "Validação",
+        explicacao: "Validação confirma que o produto atende às necessidades reais do usuário.",
+        pergunta: "Quando ocorre a validação?",
+        alternativas: [
+          "A) Antes da codificação",
+          "B) Depois da entrega, com o usuário",
+          "C) Nunca"
+        ],
+        respostaCorreta: 1,
+        porque: "Validação normalmente é feita com usuários (testes de aceitação, feedback) para verificar se o produto atende às expectativas; embora atividades de validação precoce existam, a opção B reflete o momento em que o usuário confirma aceitabilidade — A e C estão incorretas."
+      }
+    ];
+        // ... (restante dos 14 desafios do nível iniciante)
+      ],
+      intermediario: [
+        // ... (seus 15 desafios intermediários aqui - mantive o mesmo)
+        {
+          tema: "HTML — Estrutura básica",
+          explicacao: "O HTML define a estrutura e o conteúdo de uma página da web usando tags que indicam diferentes elementos.",
+          pergunta: "Qual elemento HTML contém todo o conteúdo visível e invisível de uma página?",
+          alternativas: [
+            "A) <head>",
+            "B) <html>",
+            "C) <body>"
+          ],
+          respostaCorreta: 1,
+          porque: "A tag <html> é o elemento raiz do documento e engloba tanto o <head> (informações e metadados) quanto o <body> (conteúdo visível). O <head> e o <body> são partes internas dessa estrutura."
+        },
+           {
+          tema: "HTML — Tags semânticas",
+          explicacao: "As tags semânticas ajudam a dar significado ao conteúdo, tornando o código mais organizado e acessível.",
+          pergunta: "Qual dessas tags HTML é considerada semântica?",
+          alternativas: [
+            "A) <div>",
+            "B) <section>",
+            "C) <span>"
+          ],
+          respostaCorreta: 1,
+          porque: "<section> tem um significado próprio — representa uma seção temática do documento. Já <div> e <span> são elementos genéricos, usados apenas para agrupar conteúdo sem valor semântico."
+        },
+        {
+          tema: "HTML — Links e navegação",
+          explicacao: "Links são criados em HTML para permitir a navegação entre páginas ou seções.",
+          pergunta: "Qual atributo da tag <a> define o destino do link?",
+          alternativas: [
+            "A) src",
+            "B) href",
+            "C) alt"
+          ],
+          respostaCorreta: 1,
+          porque: "O atributo href especifica o endereço (URL) para onde o link deve levar. O src é usado em imagens e o alt serve como texto alternativo, não para navegação."
+        },
+        {
+          tema: "HTML — Imagens",
+          explicacao: "Imagens em HTML são inseridas com a tag <img>, que carrega um arquivo externo na página.",
+          pergunta: "Qual atributo é obrigatório em uma tag <img>?",
+          alternativas: [
+            "A) src",
+            "B) alt",
+            "C) Ambos"
+          ],
+          respostaCorreta: 2,
+          porque: "src indica o caminho da imagem, e alt descreve o conteúdo da imagem (essencial para acessibilidade e SEO). Ambos são considerados boas práticas obrigatórias."
+        },
+        {
+          tema: "CSS — Estilização",
+          explicacao: "O CSS define o estilo visual de uma página: cores, tamanhos, espaçamentos e fontes.",
+          pergunta: "Qual propriedade CSS muda a cor do texto?",
+          alternativas: [
+            "A) background-color",
+            "B) color",
+            "C) font-style"
+          ],
+          respostaCorreta: 1,
+          porque: "A propriedade color altera a cor da fonte do texto, enquanto background-color muda a cor do fundo e font-style define o estilo da fonte (como itálico)."
+        },
+        {
+          tema: "CSS — Seletores",
+          explicacao: "Os seletores CSS definem a quais elementos as regras de estilo serão aplicadas.",
+          pergunta: "O seletor .menu afeta quais elementos?",
+          alternativas: [
+            "A) Todos os elementos <menu>",
+            "B) Todos os elementos com id='menu'",
+            "C) Todos os elementos com class='menu'"
+          ],
+          respostaCorreta: 2,
+          porque: "O ponto (.) em CSS indica uma classe. Assim, .menu estiliza todos os elementos que possuem class='menu'. Já #menu seria um seletor de ID."
+        },
+        {
+          tema: "CSS — Cores e unidades",
+          explicacao: "Em CSS, as cores podem ser definidas por nome, código hexadecimal, RGB ou HSL.",
+          pergunta: "Qual destas é uma forma válida de definir uma cor em CSS?",
+          alternativas: [
+            "A) color: azul;",
+            "B) color: #0000FF;",
+            "C) color: (255,0,0);"
+          ],
+          respostaCorreta: 1,
+          porque: "A sintaxe hexadecimal #0000FF é válida e representa azul. 'azul' não é reconhecido (deveria ser 'blue'), e (255,0,0) não tem o prefixo rgb."
+        },
+        {
+          tema: "CSS — Box Model",
+          explicacao: "O modelo de caixa define como cada elemento é construído com margens, bordas, preenchimento e conteúdo.",
+          pergunta: "Qual propriedade define o espaço entre o conteúdo e a borda do elemento?",
+          alternativas: [
+            "A) margin",
+            "B) padding",
+            "C) border"
+          ],
+          respostaCorreta: 1,
+          porque: "padding é o espaço interno entre o conteúdo e a borda. margin é o espaço externo (entre elementos), e border é a linha que envolve o conteúdo e o padding."
+        },
+        {
+          tema: "CSS — Layout",
+          explicacao: "Propriedades de layout definem como os elementos se organizam na página.",
+          pergunta: "Qual propriedade define o tipo de exibição (como bloco, linha ou flex)?",
+          alternativas: [
+            "A) position",
+            "B) display",
+            "C) align-items"
+          ],
+          respostaCorreta: 1,
+          porque: "display controla o comportamento básico de exibição (ex.: block, inline, flex). position define o posicionamento e align-items é usada dentro de um contêiner flex."
+        },
+        {
+          tema: "CSS — Responsividade",
+          explicacao: "O design responsivo adapta o layout a diferentes tamanhos de tela, como celulares e desktops.",
+          pergunta: "Qual recurso CSS é usado para aplicar estilos diferentes em tamanhos de tela específicos?",
+          alternativas: [
+            "A) @keyframes",
+            "B) @media",
+            "C) @font-face"
+          ],
+          respostaCorreta: 1,
+          porque: "As media queries (@media) permitem aplicar regras condicionais, adaptando o layout. @keyframes cria animações e @font-face importa fontes externas."
+        },
+        {
+          tema: "JavaScript — Introdução",
+          explicacao: "O JavaScript permite adicionar interatividade e lógica à página, tornando-a dinâmica.",
+          pergunta: "Onde o código JavaScript é normalmente inserido em um arquivo HTML?",
+          alternativas: [
+            "A) Dentro da tag <style>",
+            "B) Dentro da tag <script>",
+            "C) Dentro da tag <link>"
+          ],
+          respostaCorreta: 1,
+          porque: "A tag <script> é usada para inserir ou importar código JavaScript. <style> é usada para CSS e <link> serve para conectar arquivos externos, como estilos."
+        },
+        {
+          tema: "JavaScript — Variáveis",
+          explicacao: "Variáveis armazenam valores que podem ser usados e modificados pelo código.",
+          pergunta: "Qual palavra-chave não é usada para declarar variáveis em JavaScript moderno?",
+          alternativas: [
+            "A) let",
+            "B) var",
+            "C) set"
+          ],
+          respostaCorreta: 2,
+          porque: "let e var são palavras reservadas para criar variáveis; set não é usada para isso. Existe o método set(), mas não como declaração de variável."
+        },
+        {
+          tema: "JavaScript — Tipos de dados",
+          explicacao: "JavaScript trabalha com diferentes tipos de dados: números, strings, booleanos, objetos, etc.",
+          pergunta: "Qual desses valores representa um booleano?",
+          alternativas: [
+            "A) 'true'",
+            "B) true",
+            "C) 'false'"
+          ],
+          respostaCorreta: 1,
+          porque: "true (sem aspas) é um valor booleano. Com aspas, 'true' e 'false' são strings (textos)."
+        },
+        {
+          tema: "JavaScript — Funções",
+          explicacao: "Funções agrupam blocos de código que executam tarefas específicas e podem ser reutilizadas.",
+          pergunta: "Qual é a forma correta de declarar uma função?",
+          alternativas: [
+            "A) function minhaFuncao() {}",
+            "B) func minhaFuncao {}",
+            "C) function: minhaFuncao {}"
+          ],
+          respostaCorreta: 0,
+          porque: "A sintaxe correta usa a palavra-chave function, seguida pelo nome e parênteses. As opções B e C não existem na linguagem."
+        },
+        {
+          tema: "JavaScript — Interação com HTML (DOM)",
+          explicacao: "O DOM (Document Object Model) permite que o JavaScript acesse e modifique elementos HTML dinamicamente.",
+          pergunta: "Qual método seleciona um elemento pelo seu ID?",
+          alternativas: [
+            "A) document.getElementById()",
+            "B) document.querySelectorAll()",
+            "C) document.getElementsByClassName()"
+          ],
+          respostaCorreta: 0,
+          porque: "getElementById() retorna exatamente o elemento com o ID especificado. As outras opções servem para classes ou seletores múltiplos."
+        }
+      ]
+    };
+        // ... (restante dos 14 desafios do nível intermediário)
+      ],
+      avancado: [
+        {
+          id: 1,
+          tema: "Verificação de idade",
+          explicacao: "🧩 Crie um código em HTML, CSS e JavaScript onde o usuário insere nome e idade e o sistema responde: 'Maior de idade, pode dirigir' ou 'Menor de idade, barrado'.",
+          pergunta: "Implemente um sistema de verificação de idade:",
+          tipo: "codigo",
+          requisitos: [
+            "Campo de entrada para nome",
+            "Campo de entrada para idade",
+            "Botão para verificar",
+            "Exibir mensagem apropriada baseada na idade (>=18: 'Maior de idade, pode dirigir', <18: 'Menor de idade, barrado')",
+            "Usar elementos HTML apropriados (input, button, p)"
+          ],
+          teste: function(codigo) {
+            try {
+              // Criar um iframe para testar o código isoladamente
+              const iframe = document.createElement('iframe');
+              iframe.style.display = 'none';
+              document.body.appendChild(iframe);
+              
+              const doc = iframe.contentDocument || iframe.contentWindow.document;
+              doc.open();
+              doc.write(codigo);
+              doc.close();
+              
+              // Verificar se os elementos necessários existem
+              const temInputNome = doc.querySelector('input[type="text"], input[placeholder*="nome" i], input[name*="nome" i]') !== null;
+              const temInputIdade = doc.querySelector('input[type="number"], input[placeholder*="idade" i], input[name*="idade" i]') !== null;
+              const temBotao = doc.querySelector('button') !== null;
+              const temParagrafo = doc.querySelector('p') !== null;
+              
+              // Testar funcionalidade
+              let funcional = false;
+              if (temInputNome && temInputIdade && temBotao && temParagrafo) {
+                // Simular entrada de dados
+                const inputNome = doc.querySelector('input[type="text"], input[placeholder*="nome" i], input[name*="nome" i]');
+                const inputIdade = doc.querySelector('input[type="number"], input[placeholder*="idade" i], input[name*="idade" i]');
+                const botao = doc.querySelector('button');
+                const paragrafo = doc.querySelector('p');
+                
+                // Teste 1: Menor de idade
+                inputNome.value = "João";
+                inputIdade.value = "16";
+                botao.click();
+                const resultado1 = paragrafo.textContent.toLowerCase();
+                
+                // Teste 2: Maior de idade
+                inputIdade.value = "20";
+                botao.click();
+                const resultado2 = paragrafo.textContent.toLowerCase();
+                
+                funcional = (resultado1.includes("menor") || resultado1.includes("barrado")) && 
+                           (resultado2.includes("maior") || resultado2.includes("dirigir"));
+              }
+              
+              document.body.removeChild(iframe);
+              return temInputNome && temInputIdade && temBotao && temParagrafo && funcional;
+            } catch (e) {
+              return false;
+            }
+          }
+        },
+        {
+          id: 2,
+          tema: "Calculadora simples",
+          explicacao: "🧩 Crie um código com dois campos numéricos e um botão 'Somar'. Ao clicar, o JavaScript deve mostrar o resultado da soma em um parágrafo.",
+          pergunta: "Implemente uma calculadora de soma:",
+          tipo: "codigo",
+          requisitos: [
+            "Dois campos de entrada numérica",
+            "Botão com texto 'Somar'",
+            "Exibir resultado da soma em um parágrafo",
+            "Usar document.getElementById() ou querySelector()",
+            "Converter valores para número antes de somar"
+          ],
+          teste: function(codigo) {
+            try {
+              const iframe = document.createElement('iframe');
+              iframe.style.display = 'none';
+              document.body.appendChild(iframe);
+              
+              const doc = iframe.contentDocument || iframe.contentWindow.document;
+              doc.open();
+              doc.write(codigo);
+              doc.close();
+              
+              const temDoisInputs = doc.querySelectorAll('input[type="number"]').length >= 2;
+              const temBotaoSomar = Array.from(doc.querySelectorAll('button')).some(btn => 
+                btn.textContent.toLowerCase().includes('somar'));
+              const temParagrafo = doc.querySelector('p') !== null;
+              
+              let funcional = false;
+              if (temDoisInputs && temBotaoSomar && temParagrafo) {
+                const inputs = doc.querySelectorAll('input[type="number"]');
+                const botao = Array.from(doc.querySelectorAll('button')).find(btn => 
+                  btn.textContent.toLowerCase().includes('somar'));
+                const paragrafo = doc.querySelector('p');
+                
+                // Testar soma
+                inputs[0].value = "5";
+                inputs[1].value = "3";
+                botao.click();
+                const resultado = paragrafo.textContent;
+                
+                funcional = resultado.includes("8") || resultado === "8";
+              }
+              
+              document.body.removeChild(iframe);
+              return temDoisInputs && temBotaoSomar && temParagrafo && funcional;
+            } catch (e) {
+              return false;
+            }
+          }
+        },
+        {
+          id: 3,
+          tema: "Alterar a cor do texto",
+          explicacao: "🧩 Monte um site com um texto central e três botões coloridos: vermelho, verde e azul. Ao clicar em cada botão, o texto muda para a cor correspondente.",
+          pergunta: "Implemente um seletor de cores para texto:",
+          tipo: "codigo",
+          requisitos: [
+            "Texto centralizado na página",
+            "Três botões: vermelho, verde e azul",
+            "Ao clicar em cada botão, o texto muda para a cor correspondente",
+            "Usar JavaScript para manipular o estilo do texto"
+          ],
+          teste: function(codigo) {
+            try {
+              const iframe = document.createElement('iframe');
+              iframe.style.display = 'none';
+              document.body.appendChild(iframe);
+              
+              const doc = iframe.contentDocument || iframe.contentWindow.document;
+              doc.open();
+              doc.write(codigo);
+              doc.close();
+              
+              const temTexto = doc.querySelector('p, h1, h2, h3, div, span') !== null;
+              const botoes = doc.querySelectorAll('button');
+              const temTresBotoes = botoes.length >= 3;
+              
+              let funcional = false;
+              if (temTexto && temTresBotoes) {
+                const texto = doc.querySelector('p, h1, h2, h3, div, span');
+                const corOriginal = texto.style.color;
+                
+                // Testar cada botão
+                let vermelhoFunciona = false;
+                let verdeFunciona = false;
+                let azulFunciona = false;
+                
+                for (let botao of botoes) {
+                  const textoBotao = botao.textContent.toLowerCase();
+                  botao.click();
+                  const corAtual = texto.style.color;
+                  
+                  if (textoBotao.includes('vermelho') || textoBotao.includes('red')) {
+                    vermelhoFunciona = corAtual.includes('red') || corAtual.includes('#ff0000') || corAtual.includes('rgb(255, 0, 0)');
+                  } else if (textoBotao.includes('verde') || textoBotao.includes('green')) {
+                    verdeFunciona = corAtual.includes('green') || corAtual.includes('#008000') || corAtual.includes('rgb(0, 128, 0)');
+                  } else if (textoBotao.includes('azul') || textoBotao.includes('blue')) {
+                    azulFunciona = corAtual.includes('blue') || corAtual.includes('#0000ff') || corAtual.includes('rgb(0, 0, 255)');
+                  }
+                }
+                
+                funcional = vermelhoFunciona && verdeFunciona && azulFunciona;
+              }
+              
+              document.body.removeChild(iframe);
+              return temTexto && temTresBotoes && funcional;
+            } catch (e) {
+              return false;
+            }
+          }
+        },
+        // ... (adicionar os outros 7 desafios seguindo o mesmo padrão)
+        {
+          id: 10,
+          tema: "Verificar nota do aluno",
+          explicacao: "🧩 Crie um campo para o aluno digitar uma nota de 0 a 10. Ao clicar em 'Verificar', o sistema deve exibir: 'Aprovado!' se a nota for ≥ 7, 'Recuperação' se entre 5 e 6.9, 'Reprovado' se < 5.",
+          pergunta: "Implemente um sistema de verificação de notas:",
+          tipo: "codigo",
+          requisitos: [
+            "Campo de entrada para nota (0-10)",
+            "Botão 'Verificar'",
+            "Exibir resultado baseado na nota: Aprovado (≥7), Recuperação (5-6.9), Reprovado (<5)",
+            "Usar if...else if...else para a lógica"
+          ],
+          teste: function(codigo) {
+            try {
+              const iframe = document.createElement('iframe');
+              iframe.style.display = 'none';
+              document.body.appendChild(iframe);
+              
+              const doc = iframe.contentDocument || iframe.contentWindow.document;
+              doc.open();
+              doc.write(codigo);
+              doc.close();
+              
+              const temInputNota = doc.querySelector('input[type="number"]') !== null;
+              const temBotaoVerificar = Array.from(doc.querySelectorAll('button')).some(btn => 
+                btn.textContent.toLowerCase().includes('verificar'));
+              const temElementoResultado = doc.querySelector('p, div, span') !== null;
+              
+              let funcional = false;
+              if (temInputNota && temBotaoVerificar && temElementoResultado) {
+                const inputNota = doc.querySelector('input[type="number"]');
+                const botao = Array.from(doc.querySelectorAll('button')).find(btn => 
+                  btn.textContent.toLowerCase().includes('verificar'));
+                const resultado = doc.querySelector('p, div, span');
+                
+                // Teste 1: Aprovado
+                inputNota.value = "8";
+                botao.click();
+                const resultado1 = resultado.textContent.toLowerCase();
+                
+                // Teste 2: Recuperação
+                inputNota.value = "6";
+                botao.click();
+                const resultado2 = resultado.textContent.toLowerCase();
+                
+                // Teste 3: Reprovado
+                inputNota.value = "4";
+                botao.click();
+                const resultado3 = resultado.textContent.toLowerCase();
+                
+                funcional = resultado1.includes("aprovado") && 
+                           (resultado2.includes("recuperação") || resultado2.includes("recuperacao")) && 
+                           resultado3.includes("reprovado");
+              }
+              
+              document.body.removeChild(iframe);
+              return temInputNota && temBotaoVerificar && temElementoResultado && funcional;
+            } catch (e) {
+              return false;
+            }
+          }
+        }
+      ]
+    };
+
+    // Estado do usuário
+    let usuario = {
+      nome: "Usuário",
+      pontuacao: 0,
+      nivel: 1,
+      nivelAtual: "iniciante",
+      desafioAtual: 0,
+      respostasCorretas: 0
+    };
+
+    // Elementos DOM
+    const elementoFaseAtual = document.getElementById('faseAtual');
+    const elementoNumeroDesafio = document.getElementById('numeroDesafio');
+    const elementoTotalDesafios = document.getElementById('totalDesafios');
+    const elementoExplicacao = document.getElementById('explicacao');
+    const elementoPergunta = document.getElementById('pergunta');
+    const elementoAlternativas = document.getElementById('alternativas');
+    const elementoAreaCodigo = document.getElementById('areaCodigo');
+    const elementoRequisitos = document.getElementById('requisitos');
+    const elementoCodigoUsuario = document.getElementById('codigoUsuario');
+    const elementoBotaoTestar = document.getElementById('botaoTestar');
+    const elementoPreview = document.getElementById('preview');
+    const elementoBotaoEnviar = document.getElementById('botaoEnviar');
+    const elementoFeedback = document.getElementById('feedback');
+    const elementoPontuacao = document.getElementById('pontuacao');
+    const elementoNivel = document.getElementById('nivel');
+    const elementoProgresso = document.getElementById('progresso');
+    const elementoTema = document.getElementById('tema');
+
+    // Inicialização
+    function inicializar() {
+      // Carregar dados do usuário do localStorage, se existirem
+      const dadosSalvos = localStorage.getItem('usuarioEducode');
+      if (dadosSalvos) {
+        usuario = JSON.parse(dadosSalvos);
+      }
+      
+      atualizarInterface();
+      carregarDesafio();
+    }
+
+    // Obter desafios atuais baseado no nível
+    function obterDesafiosAtuais() {
+      return todosDesafios[usuario.nivelAtual];
+    }
+
+    // Atualizar interface com dados do usuário
+    function atualizarInterface() {
+      const desafiosAtuais = obterDesafiosAtuais();
+      
+      elementoPontuacao.textContent = usuario.pontuacao;
+      elementoNivel.textContent = usuario.nivel;
+      elementoNumeroDesafio.textContent = usuario.desafioAtual + 1;
+      elementoTotalDesafios.textContent = desafiosAtuais.length;
+      elementoProgresso.style.width = `${(usuario.desafioAtual / desafiosAtuais.length) * 100}%`;
+      
+      // Atualizar nome do nível
+      if (usuario.nivelAtual === "iniciante") {
+        elementoFaseAtual.textContent = "Iniciante";
+      } else if (usuario.nivelAtual === "intermediario") {
+        elementoFaseAtual.textContent = "Intermediário";
+      } else if (usuario.nivelAtual === "avancado") {
+        elementoFaseAtual.textContent = "Avançado";
+      }
+    }
+
+    // Carregar desafio específico
+    function carregarDesafio() {
+      const desafiosAtuais = obterDesafiosAtuais();
+      
+      if (usuario.desafioAtual >= desafiosAtuais.length) {
+        // Todos os desafios foram completados
+        finalizarNivel();
+        return;
+      }
+
+      const desafio = desafiosAtuais[usuario.desafioAtual];
+      
+      elementoTema.textContent = `Tema: ${desafio.tema}`;
+      elementoExplicacao.textContent = desafio.explicacao;
+      elementoPergunta.textContent = desafio.pergunta;
+      
+      // Limpar alternativas anteriores
+      elementoAlternativas.innerHTML = '';
+      
+      // Verificar se é um desafio de código
+      if (desafio.tipo === "codigo") {
+        elementoAreaCodigo.style.display = 'block';
+        elementoBotaoEnviar.textContent = "Enviar Código";
+        
+        // Mostrar requisitos
+        elementoRequisitos.innerHTML = `
+          <h4>Requisitos do código:</h4>
+          <ul>
+            ${desafio.requisitos.map(req => `<li>${req}</li>`).join('')}
+          </ul>
+        `;
+        
+        // Limpar área de código
+        elementoCodigoUsuario.value = '';
+        elementoPreview.innerHTML = '';
+      } else {
+        elementoAreaCodigo.style.display = 'none';
+        elementoBotaoEnviar.textContent = "Enviar Resposta";
+        
+        // Adicionar alternativas para desafios de múltipla escolha
+        desafio.alternativas.forEach((alternativa, index) => {
+          const divAlternativa = document.createElement('div');
+          divAlternativa.className = 'alternativa';
+          divAlternativa.textContent = alternativa;
+          divAlternativa.dataset.indice = index;
+          divAlternativa.addEventListener('click', selecionarAlternativa);
+          elementoAlternativas.appendChild(divAlternativa);
+        });
+      }
+      
+      // Resetar feedback
+      elementoFeedback.style.display = 'none';
+      elementoFeedback.className = 'feedback';
+      
+      // Resetar seleção
+      elementoBotaoEnviar.disabled = false;
+    }
+
+    // Selecionar alternativa
+    function selecionarAlternativa(event) {
+      // Remover seleção anterior
+      const alternativas = document.querySelectorAll('.alternativa');
+      alternativas.forEach(alt => alt.classList.remove('selected'));
+      
+      // Selecionar nova alternativa
+      event.target.classList.add('selected');
+    }
+
+    // Testar código (para desafios avançados)
+    function testarCodigo() {
+      const desafiosAtuais = obterDesafiosAtuais();
+      const desafio = desafiosAtuais[usuario.desafioAtual];
+      const codigo = elementoCodigoUsuario.value;
+      
+      if (!codigo.trim()) {
+        alert('Por favor, digite algum código antes de testar.');
+        return;
+      }
+      
+      try {
+        // Executar o código no preview
+        elementoPreview.innerHTML = '';
+        const iframe = document.createElement('iframe');
+        iframe.style.width = '100%';
+        iframe.style.height = '300px';
+        iframe.style.border = '1px solid #ddd';
+        elementoPreview.appendChild(iframe);
+        
+        const doc = iframe.contentDocument || iframe.contentWindow.document;
+        doc.open();
+        doc.write(codigo);
+        doc.close();
+        
+        elementoFeedback.style.display = 'block';
+        elementoFeedback.textContent = 'Código executado com sucesso! Verifique se está funcionando corretamente.';
+        elementoFeedback.className = 'feedback correct';
+      } catch (e) {
+        elementoFeedback.style.display = 'block';
+        elementoFeedback.textContent = 'Erro ao executar o código: ' + e.message;
+        elementoFeedback.className = 'feedback incorrect';
+      }
+    }
+
+    // Verificar resposta
+    function verificarResposta() {
+      const desafiosAtuais = obterDesafiosAtuais();
+      const desafio = desafiosAtuais[usuario.desafioAtual];
+      
+      let correto = false;
+      
+      if (desafio.tipo === "codigo") {
+        // Verificar código para desafios avançados
+        const codigo = elementoCodigoUsuario.value;
+        
+        if (!codigo.trim()) {
+          alert('Por favor, digite seu código antes de enviar.');
+          return;
+        }
+        
+        correto = desafio.teste(codigo);
+        
+        elementoFeedback.style.display = 'block';
+        if (correto) {
+          elementoFeedback.textContent = 'Parabéns! Seu código está correto e atende a todos os requisitos.';
+          elementoFeedback.className = 'feedback correct';
+        } else {
+          elementoFeedback.textContent = 'Seu código não atende a todos os requisitos. Verifique os itens listados e tente novamente.';
+          elementoFeedback.className = 'feedback incorrect';
+        }
+      } else {
+        // Verificar alternativa para desafios de múltipla escolha
+        const alternativaSelecionada = document.querySelector('.alternativa.selected');
+        
+        if (!alternativaSelecionada) {
+          alert('Por favor, selecione uma alternativa antes de enviar.');
+          return;
+        }
+        
+        const indiceSelecionado = parseInt(alternativaSelecionada.dataset.indice);
+        const respostaCorreta = desafio.respostaCorreta;
+        
+        // Desabilitar botão para evitar múltiplos envios
+        elementoBotaoEnviar.disabled = true;
+        
+        // Marcar alternativas corretas/incorretas
+        const alternativas = document.querySelectorAll('.alternativa');
+        alternativas.forEach((alt, index) => {
+          if (index === respostaCorreta) {
+            alt.classList.add('correct');
+          } else if (index === indiceSelecionado && index !== respostaCorreta) {
+            alt.classList.add('incorrect');
+          }
+        });
+        
+        // Mostrar feedback
+        elementoFeedback.style.display = 'block';
+        
+        if (indiceSelecionado === respostaCorreta) {
+          correto = true;
+          elementoFeedback.textContent = `Correto! ${desafio.porque}`;
+          elementoFeedback.classList.add('correct');
+        } else {
+          elementoFeedback.textContent = `Incorreto. ${desafio.porque}`;
+          elementoFeedback.classList.add('incorrect');
+        }
+      }
+      
+      if (correto) {
+        // Atualizar pontuação
+        usuario.pontuacao += 10;
+        usuario.respostasCorretas++;
+        
+        // Verificar se subiu de nível
+        if (usuario.respostasCorretas >= 5 && usuario.nivel === 1) {
+          usuario.nivel = 2;
+          usuario.nivelAtual = "intermediario";
+          usuario.desafioAtual = 0;
+          elementoFaseAtual.textContent = "Intermediário";
+        } else if (usuario.respostasCorretas >= 10 && usuario.nivel === 2) {
+          usuario.nivel = 3;
+          usuario.nivelAtual = "avancado";
+          usuario.desafioAtual = 0;
+          elementoFaseAtual.textContent = "Avançado";
+        }
+        
+        // Atualizar interface
+        atualizarInterface();
+        
+        // Salvar progresso
+        localStorage.setItem('usuarioEducode', JSON.stringify(usuario));
+        
+        // Avançar para próximo desafio após um tempo
+        setTimeout(() => {
+          usuario.desafioAtual++;
+          if (usuario.desafioAtual < desafiosAtuais.length) {
+            carregarDesafio();
+          } else {
+            final
+              // No final do arquivo desafios.html, atualize o script:
+
+// ... (código anterior permanece igual)
+
+// Função para salvar progresso no backend
+async function salvarProgressoBackend() {
+  try {
+    const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+    
+    if (usuarioLogado && usuarioLogado.id) {
+      await fetch(`${API_URL}/usuario/${usuarioLogado.id}/pontuacao`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ pontuacao: usuario.pontuacao })
+      });
+    }
+  } catch (error) {
+    console.error('Erro ao salvar progresso:', error);
+  }
+}
+
+// Modificar a função verificarResposta para salvar no backend
+function verificarResposta() {
+  const desafiosAtuais = obterDesafiosAtuais();
+  const desafio = desafiosAtuais[usuario.desafioAtual];
+  
+  let correto = false;
+  
+  if (desafio.tipo === "codigo") {
+    // ... (código anterior)
+    
+    if (correto) {
+      // Atualizar pontuação
+      usuario.pontuacao += 10;
+      usuario.respostasCorretas++;
+      
+      // Salvar no backend
+      salvarProgressoBackend();
+      
+      // ... (restante do código)
+    }
+  } else {
+    // ... (código anterior para múltipla escolha)
+    
+    if (indiceSelecionado === respostaCorreta) {
+      correto = true;
+      usuario.pontuacao += 10;
+      usuario.respostasCorretas++;
+      
+      // Salvar no backend
+      salvarProgressoBackend();
+      
+      // ... (restante do código)
+    }
+  }
+}
+
+
+// Modificar a inicialização para verificar usuário logado
+function inicializar() {
+  // Verificar se usuário está logado
+  const usuarioLogado = localStorage.getItem('usuarioLogado');
+  if (!usuarioLogado) {
+    alert('Por favor, faça login para acessar os desafios.');
+    window.location.href = 'index.html';
+    return;
+  }
+  
+  // Carregar dados do usuário
+  const dadosSalvos = localStorage.getItem('usuarioEducode');
+  if (dadosSalvos) {
+    usuario = JSON.parse(dadosSalvos);
+  }
+  
+  atualizarInterface();
+  carregarDesafio();
+}
+on onclick="window.location.href='ranking.html'">Ranking</button>
+    <button onclick="window.location.href='cadastro.html'">Cadastro</button>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Desafios Educativos - <span id="faseAtual">Iniciante</span></h2>
+  <h3>Desafio <span id="numeroDesafio">1</span></h3>
+  <p id="explicacao"></p>
+  <p id="pergunta"></p>
+
+  <div class="alternativas" id="alternativas"></div>
+
+  <textarea id="codigoUsuario" placeholder="Digite seu código aqui..." style="display:none;"></textarea>
+  <button id="botaoEnviar">Enviar Resposta</button>
+
+  <div class="feedback" id="feedback"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

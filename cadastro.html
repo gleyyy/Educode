@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cadastro - Educode</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- CORRIJA: Remova um dos headers -->
+<header>
+  <div class="logo" onclick="window.location.href='index.html'">
+    <div class="logo-circle">
+      <img src="https://uploads.onecompiler.io/42qguq6z9/442awnxs6/Logoeducode.png" alt="Educode Logo" class="logo-image">
+    </div>
+    <span>Educode</span>
+  </div>
+  <nav>
+    <button onclick="window.location.href='index.html'">Início</button>
+    <button onclick="window.location.href='desafios.html'">Desafios</button>
+    <button onclick="window.location.href='ranking.html'">Ranking</button>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Cadastro de Aluno</h2>
+  <form id="formCadastro">
+    <label>Email:</label><br>
+    <input type="email" id="email" required><br><br>
+    <label>Senha:</label><br>
+    <input type="password" id="senha" required><br><br>
+    <button type="submit">Cadastrar</button>
+  </form>
+  <div class="feedback" id="feedbackCadastro"></div>
+</div>
+
+<script>
+// ... seu script JavaScript permanece igual
+</script>
+</body>
+</html>

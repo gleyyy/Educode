@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranking - Educode</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    </div>
+    <span>Educode</span>
+  </div>
+  <nav>
+    <button onclick="window.location.href='index.html'">Início</button>
+    <button onclick="window.location.href='desafios.html'">Desafios</button>
+    <button onclick="window.location.href='cadastro.html'">Cadastro</button>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Ranking de Alunos</h2>
+  <ol id="rankingLista"></ol>
+</div>
+
+<script>
+const ranking = document.getElementById('rankingLista');
+let usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+usuarios.sort((a,b)=>b.pontos - a.pontos);
+ranking.innerHTML = usuarios.map(u=>`<li>${u.email} - ${u.pontos} pontos</li>`).join('');
+</script>
+</body>
+</html>

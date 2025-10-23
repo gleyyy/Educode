@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educode - Aprenda Jogando</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <!-- CABEÇALHO -->
+<header>
+  <div class="logo" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+    <div class="logo-circle">
+      <!-- Substitua pelo caminho da sua logo convertida -->
+      <img src="https://uploads.onecompiler.io/42qguq6z9/442awnxs6/Logoeducode.png" alt="Educode Logo" class="logo-image">
+    </div>
+    <span>Educode</span>
+  </div>
+    <nav>
+      <button onclick="scrollToSection('hero')">Início</button>
+      <button onclick="scrollToSection('features')">Funcionalidades</button>
+      <button onclick="window.location.href='ranking.html'">Ranking</button>
+      <button onclick="window.location.href='cadastro.html'">Cadastro</button>
+    </nav>
+  </header>
+
+  <!-- BANNER PRINCIPAL -->
+  <section class="hero" id="hero">
+    <h1>Aprenda a Programar Jogando!</h1>
+    <p>Complete desafios e suba de nível enquanto aprende HTML, CSS e JavaScript.</p>
+    <button onclick="window.location.href='desafios.html'">Começar</button>
+  </section>
+
+  <!-- DESTAQUES -->
+  <section class="features" id="features">
+    <div class="feature-card">
+      <h3>Desafios de Programação</h3>
+      <p>Responda perguntas interativas e pratique o que aprendeu de forma gamificada.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Sistema de Níveis</h3>
+      <p>Suba de iniciante a Pro Player, desbloqueando desafios mais complexos.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Ranking de Alunos</h3>
+      <p>Veja seu desempenho e compare com outros estudantes em tempo real.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Feedback Instantâneo</h3>
+      <p>Receba explicações detalhadas sobre respostas corretas e incorretas.</p>
+    </div>
+  </section>
+
+  <footer>
+    Protótipo Gamificado de Programação &copy; 2025
+  </footer>
+
+<script>
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+</script>
+</body>
+</html>
